@@ -1,0 +1,16 @@
+﻿body {
+    background-color:gray;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+
+#container
+{
+    margin:0 auto;
+    width:750px;
+    text-align:left;
+    background-color:white;
+    min-height:500px;
+    padding:10px;
+}
