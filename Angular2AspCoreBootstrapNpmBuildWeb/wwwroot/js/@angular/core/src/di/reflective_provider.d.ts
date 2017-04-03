@@ -1,4 +1,4 @@
-import { Type } from '../facade/lang';
+import { Self, SkipSelf } from './metadata';
 import { Provider } from './provider';
 import { ReflectiveKey } from './reflective_key';
 /**
@@ -8,10 +8,8 @@ import { ReflectiveKey } from './reflective_key';
 export declare class ReflectiveDependency {
     key: ReflectiveKey;
     optional: boolean;
-    lowerBoundVisibility: any;
-    upperBoundVisibility: any;
-    properties: any[];
-    constructor(key: ReflectiveKey, optional: boolean, lowerBoundVisibility: any, upperBoundVisibility: any, properties: any[]);
+    visibility: Self | SkipSelf | null;
+    constructor(key: ReflectiveKey, optional: boolean, visibility: Self | SkipSelf | null);
     static fromKey(key: ReflectiveKey): ReflectiveDependency;
 }
 /**
@@ -24,7 +22,7 @@ export declare class ReflectiveDependency {
  * ### Example ([live demo](http://plnkr.co/edit/RfEnhh8kUEI0G3qsnIeT?p%3Dpreview&p=preview))
  *
  * ```typescript
- * var resolvedProviders = Injector.resolve([new Provider('message', {useValue: 'Hello'})]);
+ * var resolvedProviders = Injector.resolve([{ provide: 'message', useValue: 'Hello' }]);
  * var injector = Injector.fromResolvedProviders(resolvedProviders);
  *
  * expect(injector.get('message')).toEqual('Hello');
@@ -34,7 +32,7 @@ export declare class ReflectiveDependency {
  */
 export interface ResolvedReflectiveProvider {
     /**
-     * A key, usually a `Type`.
+     * A key, usually a `Type<any>`.
      */
     key: ReflectiveKey;
     /**
@@ -46,22 +44,16 @@ export interface ResolvedReflectiveProvider {
      */
     multiProvider: boolean;
 }
-/**
- * See {@link ResolvedReflectiveProvider} instead.
- *
- * @deprecated
- */
-export interface ResolvedReflectiveBinding extends ResolvedReflectiveProvider {
-}
-export declare class ResolvedReflectiveProvider_ implements ResolvedReflectiveBinding {
+export declare class ResolvedReflectiveProvider_ implements ResolvedReflectiveProvider {
     key: ReflectiveKey;
     resolvedFactories: ResolvedReflectiveFactory[];
     multiProvider: boolean;
     constructor(key: ReflectiveKey, resolvedFactories: ResolvedReflectiveFactory[], multiProvider: boolean);
-    resolvedFactory: ResolvedReflectiveFactory;
+    readonly resolvedFactory: ResolvedReflectiveFactory;
 }
 /**
- * An internal resolved representation of a factory function created by resolving {@link Provider}.
+ * An internal resolved representation of a factory function created by resolving {@link
+ * Provider}.
  * @experimental
  */
 export declare class ResolvedReflectiveFactory {
@@ -84,26 +76,13 @@ export declare class ResolvedReflectiveFactory {
         dependencies: ReflectiveDependency[]);
 }
 /**
- * Resolve a single provider.
- */
-export declare function resolveReflectiveFactory(provider: Provider): ResolvedReflectiveFactory;
-/**
- * Converts the {@link Provider} into {@link ResolvedProvider}.
- *
- * {@link Injector} internally only uses {@link ResolvedProvider}, {@link Provider} contains
- * convenience provider syntax.
- */
-export declare function resolveReflectiveProvider(provider: Provider): ResolvedReflectiveProvider;
-/**
  * Resolve a list of Providers.
  */
-export declare function resolveReflectiveProviders(providers: Array<Type | Provider | {
-    [k: string]: any;
-} | any[]>): ResolvedReflectiveProvider[];
+export declare function resolveReflectiveProviders(providers: Provider[]): ResolvedReflectiveProvider[];
 /**
  * Merges a list of ResolvedProviders into a list where
  * each key is contained exactly once and multi providers
  * have been merged.
  */
 export declare function mergeResolvedReflectiveProviders(providers: ResolvedReflectiveProvider[], normalizedProvidersMap: Map<number, ResolvedReflectiveProvider>): Map<number, ResolvedReflectiveProvider>;
-export declare function constructDependencies(typeOrFunc: any, dependencies: any[]): ReflectiveDependency[];
+export declare function constructDependencies(typeOrFunc: any, dependencies?: any[]): ReflectiveDependency[];

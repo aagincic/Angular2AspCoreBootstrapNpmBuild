@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_doc", "_doc", "{0FDA609C-81A2-4511-8281-77EDCD727C24}"
 	ProjectSection(SolutionItems) = preProject
 		package.json.backup.txt = package.json.backup.txt
+		Angular2AspCoreBootstrapNpmBuildWeb\tsconfig.json = Angular2AspCoreBootstrapNpmBuildWeb\tsconfig.json
 	EndProjectSection
 EndProject
 Global

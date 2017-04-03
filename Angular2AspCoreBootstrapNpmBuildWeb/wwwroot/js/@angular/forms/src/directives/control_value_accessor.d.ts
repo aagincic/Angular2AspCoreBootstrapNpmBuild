@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { OpaqueToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 /**
  * A bridge between a control and a native element.
  *
@@ -14,7 +14,7 @@ import { OpaqueToken } from '@angular/core';
  *
  * Please see {@link DefaultValueAccessor} for more information.
  *
- * @experimental
+ * @stable
  */
 export interface ControlValueAccessor {
     /**
@@ -29,11 +29,18 @@ export interface ControlValueAccessor {
      * Set the function to be called when the control receives a touch event.
      */
     registerOnTouched(fn: any): void;
+    /**
+     * This function is called when the control status changes to or from "DISABLED".
+     * Depending on the value, it will enable or disable the appropriate DOM element.
+     *
+     * @param isDisabled
+     */
+    setDisabledState?(isDisabled: boolean): void;
 }
 /**
  * Used to provide a {@link ControlValueAccessor} for form controls.
  *
  * See {@link DefaultValueAccessor} for how to implement one.
- * @experimental
+ * @stable
  */
-export declare const NG_VALUE_ACCESSOR: OpaqueToken;
+export declare const NG_VALUE_ACCESSOR: InjectionToken<ControlValueAccessor>;

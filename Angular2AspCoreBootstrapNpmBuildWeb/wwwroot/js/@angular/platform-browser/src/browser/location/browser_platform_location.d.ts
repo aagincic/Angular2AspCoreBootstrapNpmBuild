@@ -5,24 +5,24 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { PlatformLocation, UrlChangeListener } from '@angular/common';
+import { LocationChangeListener, PlatformLocation } from '@angular/common';
 /**
  * `PlatformLocation` encapsulates all of the direct calls to platform APIs.
  * This class should not be used directly by an application developer. Instead, use
  * {@link Location}.
- *
- * @stable
  */
 export declare class BrowserPlatformLocation extends PlatformLocation {
+    private _doc;
     private _location;
     private _history;
-    constructor();
+    constructor(_doc: any);
+    readonly location: Location;
     getBaseHrefFromDOM(): string;
-    onPopState(fn: UrlChangeListener): void;
-    onHashChange(fn: UrlChangeListener): void;
+    onPopState(fn: LocationChangeListener): void;
+    onHashChange(fn: LocationChangeListener): void;
     pathname: string;
-    search: string;
-    hash: string;
+    readonly search: string;
+    readonly hash: string;
     pushState(state: any, title: string, url: string): void;
     replaceState(state: any, title: string, url: string): void;
     forward(): void;

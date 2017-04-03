@@ -15,7 +15,10 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: "Angular-Start-Application",
-        template: require('./app/app.component.html!text')
+        //template: require('./app/app.component.html!text')
+        template: '<p>bok ljudovi gg</p>'
+        //templateUrl: './app/app.component.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

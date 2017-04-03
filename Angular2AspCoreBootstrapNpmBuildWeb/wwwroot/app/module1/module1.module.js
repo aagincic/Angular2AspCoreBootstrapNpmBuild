@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-///<reference path="../../typings/index.d.ts"/>
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
@@ -36,3 +35,4 @@ Module1 = __decorate([
     })
 ], Module1);
 exports.Module1 = Module1;
+//# sourceMappingURL=module1.module.js.map

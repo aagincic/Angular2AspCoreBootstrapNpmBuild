@@ -1,15 +1,6 @@
 /**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-export * from './testing/async';
-export * from './testing/component_fixture';
-export * from './testing/fake_async';
-export * from './testing/test_component_builder';
-export * from './testing/test_bed';
-export * from './testing/testing';
-export * from './testing/metadata_override';
-export * from './private_export_testing';
+ * @license Angular v4.0.1
+ * (c) 2010-2017 Google, Inc. https://angular.io/
+ * License: MIT
+ */ 
+ export * from './testing/index'

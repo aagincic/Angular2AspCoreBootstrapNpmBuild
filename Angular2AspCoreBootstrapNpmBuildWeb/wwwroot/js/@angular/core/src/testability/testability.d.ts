@@ -1,11 +1,22 @@
 import { NgZone } from '../zone/ng_zone';
 /**
+ * Testability API.
+ * `declare` keyword causes tsickle to generate externs, so these methods are
+ * not renamed by Closure Compiler.
+ * @experimental
+ */
+export interface PublicTestability {
+    isStable(): boolean;
+    whenStable(callback: Function): void;
+    findProviders(using: any, provider: string, exactMatch: boolean): any[];
+}
+/**
  * The Testability service provides testing hooks that can be accessed from
  * the browser and by services such as Protractor. Each bootstrapped Angular
  * application on the page will have an instance of Testability.
  * @experimental
  */
-export declare class Testability {
+export declare class Testability implements PublicTestability {
     private _ngZone;
     constructor(_ngZone: NgZone);
     increasePendingRequestCount(): number;
@@ -13,6 +24,7 @@ export declare class Testability {
     isStable(): boolean;
     whenStable(callback: Function): void;
     getPendingRequestCount(): number;
+    /** @deprecated use findProviders */
     findBindings(using: any, provider: string, exactMatch: boolean): any[];
     findProviders(using: any, provider: string, exactMatch: boolean): any[];
 }
@@ -23,10 +35,10 @@ export declare class Testability {
 export declare class TestabilityRegistry {
     constructor();
     registerApplication(token: any, testability: Testability): void;
-    getTestability(elem: any): Testability;
+    getTestability(elem: any): Testability | null;
     getAllTestabilities(): Testability[];
     getAllRootElements(): any[];
-    findTestabilityInTree(elem: Node, findInAncestors?: boolean): Testability;
+    findTestabilityInTree(elem: Node, findInAncestors?: boolean): Testability | null;
 }
 /**
  * Adapter interface for retrieving the `Testability` service associated for a
@@ -37,7 +49,7 @@ export declare class TestabilityRegistry {
  */
 export interface GetTestability {
     addToWindow(registry: TestabilityRegistry): void;
-    findTestabilityInTree(registry: TestabilityRegistry, elem: any, findInAncestors: boolean): Testability;
+    findTestabilityInTree(registry: TestabilityRegistry, elem: any, findInAncestors: boolean): Testability | null;
 }
 /**
  * Set the {@link GetTestability} implementation used by the Angular testing framework.

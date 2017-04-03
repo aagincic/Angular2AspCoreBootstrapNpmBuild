@@ -5,14 +5,13 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModuleMetadata } from '@angular/core';
-import { ReflectorReader } from '../core_private';
-import { Type } from './facade/lang';
+import { NgModule, Type, ɵReflectorReader } from '@angular/core';
 /**
- * Resolves types to {@link NgModuleMetadata}.
+ * Resolves types to {@link NgModule}.
  */
 export declare class NgModuleResolver {
     private _reflector;
-    constructor(_reflector?: ReflectorReader);
-    resolve(type: Type, throwIfNotFound?: boolean): NgModuleMetadata;
+    constructor(_reflector?: ɵReflectorReader);
+    isNgModule(type: any): boolean;
+    resolve(type: Type<any>, throwIfNotFound?: boolean): NgModule;
 }

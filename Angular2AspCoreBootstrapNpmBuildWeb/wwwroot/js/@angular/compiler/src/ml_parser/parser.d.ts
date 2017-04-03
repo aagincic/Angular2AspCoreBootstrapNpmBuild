@@ -1,3 +1,10 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 import { ParseError, ParseSourceSpan } from '../parse_util';
 import * as html from './ast';
 import { InterpolationConfig } from './interpolation_config';
@@ -13,7 +20,7 @@ export declare class ParseTreeResult {
     constructor(rootNodes: html.Node[], errors: ParseError[]);
 }
 export declare class Parser {
-    private _getTagDefinition;
-    constructor(_getTagDefinition: (tagName: string) => TagDefinition);
+    getTagDefinition: (tagName: string) => TagDefinition;
+    constructor(getTagDefinition: (tagName: string) => TagDefinition);
     parse(source: string, url: string, parseExpansionForms?: boolean, interpolationConfig?: InterpolationConfig): ParseTreeResult;
 }

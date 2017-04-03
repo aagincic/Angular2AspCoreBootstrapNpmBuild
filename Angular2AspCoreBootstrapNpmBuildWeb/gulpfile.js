@@ -1,9 +1,9 @@
 ﻿var gulp = require('gulp'),
     gp_clean = require('gulp-clean');
-    //gp_concat = require('gulp-concat'),
-    //gp_sourcemaps = require('gulp-sourcemaps'),
-    //gp_typescript = require('gulp-typescript'),
-    //gp_uglify = require('gulp-uglify');
+//gp_concat = require('gulp-concat'),
+//gp_sourcemaps = require('gulp-sourcemaps'),
+//gp_typescript = require('gulp-typescript'),
+//gp_uglify = require('gulp-uglify');
 
 
 
@@ -12,6 +12,7 @@ var srcPaths = {
     js: [
         'Scripts/js/**/*.js',
         'node_modules/core-js/client/shim.min.js',
+        'node_modules/core-js/reflect.js',
         'node_modules/zone.js/dist/zone.js',
         'node_modules/reflect-metadata/Reflect.js',
         'node_modules/systemjs/dist/system.src.js',
@@ -52,6 +53,4 @@ gulp.task('js_clean', function () {
 
 
 // Define the default task so it will launch all other tasks
-gulp.task('all', ['js_clean','js' ]);
-
-
+gulp.task('all', ['js_clean', 'js']);

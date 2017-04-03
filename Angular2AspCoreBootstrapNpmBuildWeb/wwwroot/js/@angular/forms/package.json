@@ -2,48 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular/forms@0.3.0",
+        "raw": "@angular/forms@~4.0.0",
         "scope": "@angular",
         "escapedName": "@angular%2fforms",
         "name": "@angular/forms",
-        "rawSpec": "0.3.0",
-        "spec": "0.3.0",
-        "type": "version"
+        "rawSpec": "~4.0.0",
+        "spec": ">=4.0.0 <4.1.0",
+        "type": "range"
       },
       "D:\\Aleksandar\\Development\\Templates\\Angular2AspCoreBootstrapNpmBuild\\Angular2AspCoreBootstrapNpmBuildWeb"
     ]
   ],
-  "_from": "@angular/forms@0.3.0",
-  "_id": "@angular/forms@0.3.0",
+  "_from": "@angular/forms@>=4.0.0 <4.1.0",
+  "_id": "@angular/forms@4.0.1",
   "_inCache": true,
   "_location": "/@angular/forms",
-  "_nodeVersion": "5.4.1",
+  "_nodeVersion": "6.9.5",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/forms-0.3.0.tgz_1470759636977_0.27336693881079555"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/forms-4.0.1.tgz_1490830651082_0.9427514707203954"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.9.2",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/forms@0.3.0",
+    "raw": "@angular/forms@~4.0.0",
     "scope": "@angular",
     "escapedName": "@angular%2fforms",
     "name": "@angular/forms",
-    "rawSpec": "0.3.0",
-    "spec": "0.3.0",
-    "type": "version"
+    "rawSpec": "~4.0.0",
+    "spec": ">=4.0.0 <4.1.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/forms/-/forms-0.3.0.tgz",
-  "_shasum": "d76218bb22b74d5ac3878915d377de0487c34069",
+  "_resolved": "https://registry.npmjs.org/@angular/forms/-/forms-4.0.1.tgz",
+  "_shasum": "b9ebdbbb8ace0f9a3bf9e53c299eafdfab1d5041",
   "_shrinkwrap": null,
-  "_spec": "@angular/forms@0.3.0",
+  "_spec": "@angular/forms@~4.0.0",
   "_where": "D:\\Aleksandar\\Development\\Templates\\Angular2AspCoreBootstrapNpmBuild\\Angular2AspCoreBootstrapNpmBuildWeb",
   "author": {
     "name": "angular"
@@ -52,36 +52,38 @@
     "url": "https://github.com/angular/angular/issues"
   },
   "dependencies": {},
-  "description": "",
+  "description": "Angular - directives and services for creating forms",
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "d76218bb22b74d5ac3878915d377de0487c34069",
-    "tarball": "https://registry.npmjs.org/@angular/forms/-/forms-0.3.0.tgz"
+    "shasum": "b9ebdbbb8ace0f9a3bf9e53c299eafdfab1d5041",
+    "tarball": "https://registry.npmjs.org/@angular/forms/-/forms-4.0.1.tgz"
   },
+  "es2015": "./@angular/forms.js",
   "homepage": "https://github.com/angular/angular#readme",
-  "jsnext:main": "esm/index.js",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./bundles/forms.umd.js",
   "maintainers": [
     {
       "name": "angular",
       "email": "angular-core+npm@google.com"
     }
   ],
+  "module": "./@angular/forms.es5.js",
   "name": "@angular/forms",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "^2.0.0-rc.5",
-    "@angular/common": "^2.0.0-rc.5",
-    "@angular/compiler": "^2.0.0-rc.5"
+    "@angular/core": "4.0.1",
+    "@angular/common": "4.0.1",
+    "@angular/platform-browser": "4.0.1"
   },
-  "readme": "ERROR: No README data found!",
+  "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
   "scripts": {},
-  "typings": "index.d.ts",
-  "version": "0.3.0"
+  "typings": "./forms.d.ts",
+  "version": "4.0.1"
 }

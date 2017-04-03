@@ -2,48 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular/core@2.0.0-rc.5",
+        "raw": "@angular/core@~4.0.0",
         "scope": "@angular",
         "escapedName": "@angular%2fcore",
         "name": "@angular/core",
-        "rawSpec": "2.0.0-rc.5",
-        "spec": "2.0.0-rc.5",
-        "type": "version"
+        "rawSpec": "~4.0.0",
+        "spec": ">=4.0.0 <4.1.0",
+        "type": "range"
       },
       "D:\\Aleksandar\\Development\\Templates\\Angular2AspCoreBootstrapNpmBuild\\Angular2AspCoreBootstrapNpmBuildWeb"
     ]
   ],
-  "_from": "@angular/core@2.0.0-rc.5",
-  "_id": "@angular/core@2.0.0-rc.5",
+  "_from": "@angular/core@>=4.0.0 <4.1.0",
+  "_id": "@angular/core@4.0.1",
   "_inCache": true,
   "_location": "/@angular/core",
-  "_nodeVersion": "5.4.1",
+  "_nodeVersion": "6.9.5",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/core-2.0.0-rc.5.tgz_1470759631964_0.3144527019467205"
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/core-4.0.1.tgz_1490830647381_0.7985953274182975"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.9.2",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/core@2.0.0-rc.5",
+    "raw": "@angular/core@~4.0.0",
     "scope": "@angular",
     "escapedName": "@angular%2fcore",
     "name": "@angular/core",
-    "rawSpec": "2.0.0-rc.5",
-    "spec": "2.0.0-rc.5",
-    "type": "version"
+    "rawSpec": "~4.0.0",
+    "spec": ">=4.0.0 <4.1.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/core/-/core-2.0.0-rc.5.tgz",
-  "_shasum": "6f901fd1ce00e9889c0a3678445a19ac75ea0b63",
+  "_resolved": "https://registry.npmjs.org/@angular/core/-/core-4.0.1.tgz",
+  "_shasum": "0b110a001012076ea696460ccd922707bcdf51ba",
   "_shrinkwrap": null,
-  "_spec": "@angular/core@2.0.0-rc.5",
+  "_spec": "@angular/core@~4.0.0",
   "_where": "D:\\Aleksandar\\Development\\Templates\\Angular2AspCoreBootstrapNpmBuild\\Angular2AspCoreBootstrapNpmBuildWeb",
   "author": {
     "name": "angular"
@@ -52,35 +52,37 @@
     "url": "https://github.com/angular/angular/issues"
   },
   "dependencies": {},
-  "description": "",
+  "description": "Angular - the core framework",
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "6f901fd1ce00e9889c0a3678445a19ac75ea0b63",
-    "tarball": "https://registry.npmjs.org/@angular/core/-/core-2.0.0-rc.5.tgz"
+    "shasum": "0b110a001012076ea696460ccd922707bcdf51ba",
+    "tarball": "https://registry.npmjs.org/@angular/core/-/core-4.0.1.tgz"
   },
+  "es2015": "./@angular/core.js",
   "homepage": "https://github.com/angular/angular#readme",
-  "jsnext:main": "esm/index.js",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./bundles/core.umd.js",
   "maintainers": [
     {
       "name": "angular",
       "email": "angular-core+npm@google.com"
     }
   ],
+  "module": "./@angular/core.es5.js",
   "name": "@angular/core",
   "optionalDependencies": {},
   "peerDependencies": {
-    "rxjs": "5.0.0-beta.6",
-    "zone.js": "^0.6.6"
+    "rxjs": "^5.0.1",
+    "zone.js": "^0.8.4"
   },
-  "readme": "ERROR: No README data found!",
+  "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
   "scripts": {},
-  "typings": "index.d.ts",
-  "version": "2.0.0-rc.5"
+  "typings": "./core.d.ts",
+  "version": "4.0.1"
 }
