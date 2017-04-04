@@ -4,8 +4,8 @@
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
 
-    "build": "ntsc -p ./app",
-    "build:watch": "ntsc -p app/ -w",
+    "build": "ntsc -p ./ && cpx \"./app/**/*.{html,png,jpg}\" ./wwwroot/app",
+    "build:watch": "ntsc -p ./ -w",
     "serve": "lite-server -c=bs-config.json",
     "serve:e2e": "lite-server -c=bs-config.e2e.json",
     "prestart": "npm run build",
@@ -70,7 +70,12 @@
     "typings": "^2.1.0",
 
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2"
+    "gulp-clean": "^0.3.2",
+
+    "browserify": "latest",
+    "cpx": "^1.5.0",
+
+    "@types/jasmine": "2.5.38"
 
   },
   "repository": {}
